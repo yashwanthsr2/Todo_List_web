@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moving Snake</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #gameArea {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: #fff;
+            border: 2px solid #000;
+        }
+        .snake {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            position: absolute;
+        }
+        .snake-head {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameArea"></div>
+
+    <script>
+        const gameArea = document.getElementById('gameArea');
+        const snakeLength = 5;
+        const snake = [];
+        let direction = 'right';
+
+        // Create snake segments
+        for (let i = 0; i < snakeLength; i++) {
+            const segment = document.createElement('div');
+            segment.classList.add('snake');
+            if (i === 0) segment.classList.add('snake-head');
+            segment.style.left = (i * 20) + 'px';
+            gameArea.appendChild(segment);
+            snake.push(segment);
+        }
+
+        // Move snake
+        function moveSnake() {
+            let headX = parseInt(snake[0].style.left);
+            let headY = parseInt(snake[0].style.top) || 0;
+
+            switch (direction) {
+                case 'right': headX += 20; break;
+                case 'left': headX -= 20; break;
+                case 'up': headY -= 20; break;
+                case 'down': headY += 20; break;
+            }
+
+            // Move each segment to the position of the previous segment
+            for (let i = snake.length - 1; i > 0; i--) {
+                snake[i].style.left = snake[i - 1].style.left;
+                snake[i].style.top = snake[i - 1].style.top;
+            }
+
+            // Move the head to the new position
+            snake[0].style.left = headX + 'px';
+            snake[0].style.top = headY + 'px';
+        }
+
+        // Change direction based on arrow key press
+        window.addEventListener('keydown', (e) => {
+            switch (e.key) {
+                case 'ArrowRight':
+                    if (direction !== 'left') direction = 'right';
+                    break;
+                case 'ArrowLeft':
+                    if (direction !== 'right') direction = 'left';
+                    break;
+                case 'ArrowUp':
+                    if (direction !== 'down') direction = 'up';
+                    break;
+                case 'ArrowDown':
+                    if (direction !== 'up') direction = 'down';
+                    break;
+            }
+        });
+
+        // Move the snake every 300 milliseconds
+        setInterval(moveSnake, 300);
+    </script>
+</body>
+</html>
+
