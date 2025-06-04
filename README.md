@@ -1,4 +1,4 @@
- <h3>Amity University Bangalore - Campus Management System
+ <h4>Amity University Bangalore - Campus Management System
  ___________________________________________________________________________________________________________________________________________________________________________________________
 
  Overview
@@ -85,4 +85,4 @@ ________________________________________________________________________________
 5. Add database persistence
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________
 * License 
-This project is open-source and available for educational purposes.</h3>
+This project is open-source and available for educational purposes.</h4>
