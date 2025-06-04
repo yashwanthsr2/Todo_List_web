@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: white;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: #0d0d0d;
+    }
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .btn-yellow {
+      background: #fcd34d;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 50px;
+      background: radial-gradient(circle, #1a1a1a, #000);
+    }
+    .hero-text h1 {
+      font-size: 50px;
+      margin: 0;
+    }
+    .hero-text p {
+      max-width: 400px;
+      line-height: 1.6;
+    }
+    .section {
+      padding: 50px;
+    }
+    .programs, .benefits {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #1f1f1f;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+      min-width: 200px;
+      color: white;
+    }
+    .highlight {
+      border: 2px solid #fcd34d;
+    }
+    .class-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .class-section img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+    a.join-link {
+      color: #fcd34d;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+     <img src="Logo Gym.avif" alt="Logo" style="height: 70px; width: 70px; border-radius: 70%;" /> 
+    <h1>FITNESS CLUB</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#programs">Program</a>
+      <a href="#services">Service</a>
+      <a href="#classes">About</a>
+      <a href="#community">Community</a>
+    </nav>
+    <button class="btn-yellow" onclick="alert('Redirecting to join form!')">Join Now</button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p style="color: #fcd34d; font-weight: bold;">BEST FITNESS IN THE TOWN</p>
+      <h1><strong>MAKE <span style="color: white;">YOUR</span><br> BODY SHAPE</strong></h1>
+      <p>Unleash your potential and embark on a journey towards a stronger, fitter, and more confident you.</p>
+      <button class="btn-yellow" onclick="alert('Let\'s get started on your fitness journey!')">Get Started</button>
+    </div>
+    <img src="Fitness Product.jpg" alt="Our Product" style="height: 400px;" />
+  </section>
+
+  <section class="section" id="programs">
+    <h2>EXPLORE OUR PROGRAM</h2>
+    <div class="programs">
+      <div class="card highlight">
+        <h3>Strength</h3>
+        <p>Embrace the essence of strength as we delve into its physical, mental, and emotional dimensions.</p>
+        <a class="join-link" onclick="alert('Joining Strength Program')">Join Now →</a>
+      </div>
+      <div class="card">
+        <h3>Physical Fitness</h3>
+        <p>Improve health, strength, flexibility, and overall well-being.</p>
+        <a class="join-link" onclick="alert('Joining Physical Fitness Program')">Join Now →</a>
+      </div>
+      <div class="card">
+        <h3>Fat Lose</h3>
+        <p>Empower yourself to reach your goals through expert guidance and workout routines.</p>
+        <a class="join-link" onclick="alert('Joining Fat Lose Program')">Join Now →</a>
+      </div>
+      <div class="card">
+        <h3>Weight Gain</h3>
+        <p>Gain weight in a sustainable and effective manner.</p>
+        <a class="join-link" onclick="alert('Joining Weight Gain Program')">Join Now →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="programs">
+      <div class="card">
+        <img src="weight Lifting.jpg" alt="Personal Trainer" style="width: 100%; border-radius: 8px;" />
+        <h3>Personal Trainer</h3>
+        <p>Unlock your potential with expert Personal Trainers.</p>
+      </div>
+      <div class="card">
+        <img src="Practice section.png" alt="Practice Classes" style="width: 100%; border-radius: 10px;" />
+        <h3>Practice Sessions</h3>
+        <p>Elevate your fitness with structured sessions.</p>
+      </div>
+      <div class="card">
+        <img src="Gym Management.jpg" alt="Management system" style="width: 100%; border-radius: 8px;" />
+        <h3>Good Management</h3>
+        <p>Supportive management for your fitness success.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section class-section" id="classes">
+    <div>
+         <img src="Rope Traning.jpg" alt="Rope Training" style="width: 100%; border-radius: 10px;">
+      <h2>THE CLASS YOU WILL GET HERE</h2>
+      <p>Led by expert instructors, this class blends cardio, strength, and functional training to keep you engaged and motivated.</p>
+      <button class="btn-yellow" onclick="alert('Class booked successfully!')">Book A Class</button>
+    </div>
+  <section class="section" id="community">
+    <h2>Join Our Community</h2>
+    <p>Connect with others and stay motivated together!</p>
+  </section>
+
+</body>
+</html>
+
